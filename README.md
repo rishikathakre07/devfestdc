@@ -32,16 +32,90 @@ We leverage **Google AI Studio, Vertex AI, and Google Maps APIs** to ensure food
 - ✅ Compliance with food safety guidelines (USDA / FDA).  
 
 ---
+## Flowchart
 
+```
++----------------+
+|     Start      |
++----------------+
+        |
+        v
++----------------+
+|  Food Surplus  |
+| (Donors log    |
+|   details)     |
++----------------+
+        |
+        v
++----------------+
+|  Meal Bridge   |
+|   Platform     |
+| (Data Ingestion)|
++----------------+
+        |
+        v
++----------------+
+|  AI/ML Module  |
+| (Demand Forecast,|
+|   Matching,     |
+|   Route Opt.)   |
++----------------+
+        |
+        v
++----------------+
+| Platform Notifies|
+| Recipient NGO  |
++----------------+
+        |
+        v
++------------------+
+| Recipient Confirms? |
++------------------+
+    | Yes  /   \ No
+    v      /     \
++----------------+  +----------------+
+| Generate Route |  |  Refine AI     |
+|  (Google Maps) |  |   Models       |
++----------------+  +----------------+
+        |                  ^
+        v                  |
++----------------+         |
+| Logistics Pick |---------+
+|   Up Donation  |
++----------------+
+        |
+        v
++----------------+
+| Logistics Deliver|
+|  to Recipient  |
++----------------+
+        |
+        v
++----------------+
+| Recipient      |
+|  Distributes   |
+|     Food       |
++----------------+
+        |
+        v
++----------------+
+|  Community     |
+|     Impact     |
+| (Reduced Waste,|
+|   SDG Goals)   |
++----------------+
+        |
+        v
++----------------+
+|       End      |
++----------------+
+```
 ## 🔬 Technical Architecture
 
 ### Tech Stack
 - **Frontend:** Flutter (mobile), React (web)  
-- **Backend:** Node.js / Python (FastAPI)  
-- **Database:** Firestore (real-time storage)  
+- **Backend:** Node.js / Python (FastAPI)    
 - **AI/ML:** Google AI Studio + Vertex AI  
-- **Cloud:** Firebase / Google Cloud Run  
-- **Maps:** Google Maps Platform  
 
 ---
 
@@ -69,7 +143,7 @@ Meal Bridge stands out from existing food donation apps because of its **novel s
 ## 📂 Repo Structure
 devfestdc/
 │
-├── frontend/ # Flutter / React code for web & mobile app
+├── frontend/ # Flask
 ├── backend/ # Node.js / FastAPI backend services
 ├── ai_models/ # AI/ML models for matching & prediction
 ├── docs/ # Technical docs, design diagrams, proposal
