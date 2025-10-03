@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Food Match Agent – Assignments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#22c55e; --warn:#f59e0b; --urgent:#ef4444; --chip:#1f2937; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #1f2937; position:sticky; top:0; background:rgba(15,23,42,.9); backdrop-filter:saturate(180%) blur(6px); }
+    h1 { margin:0; font-size:18px; letter-spacing:.3px; }
+    .muted { color:var(--muted); }
+    .container { max-width:1100px; margin:20px auto; padding:0 16px; }
+    .actions { display:flex; gap:10px; align-items:center; }
+    button { background:var(--accent); color:#052e16; border:0; padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer; }
+    button:active { transform: translateY(1px); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap:16px; margin-top:16px; }
+    .card { background:var(--card); border:1px solid #1f2937; border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:10px; }
+    .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .chip { background:var(--chip); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted); }
+    .priority { font-weight:700; color:white; }
+    .prio-urgent { background: var(--urgent); }
+    .prio-high { background: #dc2626; }   /* red-600 */
+    .prio-medium { background: var(--warn); }
+    .prio-low { background: #10b981; }     /* emerald-500 */
+    .two { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+    a { color:#93c5fd; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .small { font-size: 12px; color: var(--muted); }
+    .title { font-size: 16px; font-weight:700; }
+    .sep { height:1px; background:#1f2937; margin:8px 0; }
+    footer { text-align:center; padding:24px; color:var(--muted); }
+    .empty { margin:40px 0; text-align:center; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Food Match Agent <span class="muted">· Assignments</span></h1>
+    <div class="actions">
+      <form action="/run" method="post">
+        <button type="submit">Run Matching</button>
+      </form>
+      <span class="small muted">Total: {{ total }}</span>
+    </div>
+  </header>
+
+  <div class="container">
+    {% if assignments|length == 0 %}
+      <div class="empty">No assignments yet. Click “Run Matching” to generate.</div>
+    {% else %}
+      <div class="grid">
+        {% for a in assignments %}
+          <div class="card">
+            <div class="row">
+              <div class="chip">ID: {{ a.get("restaurant_id","") }} → {{ a.get("ngo_id","") }}</div>
+              <div class="chip">{{ a.get("timestamp","") }}</div>
+              <div class="chip">{{ a.get("status","") }}</div>
+              {% set pr = (a.get("ngo_priority","") or "").lower() %}
+              <div class="chip priority {% if pr=='urgent' %}prio-urgent{% elif pr=='high' %}prio-high{% elif pr=='medium' %}prio-medium{% else %}prio-low{% endif %}">
+                {{ a.get("ngo_priority","") }}
+              </div>
+            </div>
+
+            <div class="title">{{ a.get("food_item","") }} · {{ a.get("quantity","") }} {{ a.get("unit","") }}</div>
+
+            <div class="two">
+              <div>
+                <div class="small muted">Restaurant</div>
+                <div><strong>{{ a.get("restaurant","") }}</strong></div>
+                <div class="small">{{ a.get("restaurant_address","") }}</div>
+                <div class="small">Phone: {{ a.get("restaurant_phone","") }}</div>
+                <div class="small">→ NGO dist: {{ a.get("dist_rest_ngo_km",0) }} km</div>
+                <div><a target="_blank" href="{{ a.get('route_link_rest_to_ngo','#') }}">Route: Restaurant → NGO</a></div>
+              </div>
+              <div>
+                <div class="small muted">NGO</div>
+                <div><strong>{{ a.get("ngo","") }}</strong></div>
+                <div class="small">{{ a.get("ngo_address","") }}</div>
+                <div class="small">Phone: {{ a.get("ngo_phone","") }}</div>
+              </div>
+            </div>
+
+            <div class="sep"></div>
+
+            <div class="two">
+              <div>
+                <div class="small muted">Volunteer</div>
+                <div><strong>{{ a.get("volunteer","Unassigned") }}</strong></div>
+                <div class="small">Area: {{ a.get("volunteer_area","") }}</div>
+                <div class="small">Phone: {{ a.get("volunteer_phone","") }}</div>
+                <div class="small">→ to Restaurant: {{ a.get("dist_vol_to_rest_km",0) }} km</div>
+                <div><a target="_blank" href="{{ a.get('route_link_vol_to_rest','#') }}">Route: Volunteer → Restaurant</a></div>
+              </div>
+              <div>
+                <div class="small muted">Coordinates</div>
+                <div class="small">Rest: {{ a.get("restaurant_lat","") }}, {{ a.get("restaurant_lng","") }}</div>
+                <div class="small">NGO: {{ a.get("ngo_lat","") }}, {{ a.get("ngo_lng","") }}</div>
+                <div class="small">Vol: {{ a.get("vol_lat","") }}, {{ a.get("vol_lng","") }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <footer>
+    <div class="small">API: <a href="/api/assignments">/api/assignments</a></div>
+  </footer>
+</body>
+</html>

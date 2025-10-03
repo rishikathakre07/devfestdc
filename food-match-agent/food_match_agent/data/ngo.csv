@@ -1,0 +1,16 @@
+ngo_id,ngo_name,type,phone ,address,requested_item,quantity,unit,priority,latitude ,longitude 
+N001,Hope Shelter,Homeless Shelter,6175552047,200 Pine Rd Bethesda MD,Chicken Sandwich,8,each,high,38.98465,-77.09471
+N002,Community Kitchen,Community Kitchen,5085559831,201 Maple Ave Arlington VA,Veg Biryani,10,kg,medium,38.88162,-77.09098
+N003,Downtown Pantry,Food Pantry,7815556674,202 Birch Rd Alexandria VA,Garden Salad,12,packs,low,38.80484,-77.04692
+N004,St. Mary’s Soup Kitchen,Soup Kitchen,9785553290,203 Church St Rockville MD,Bread Loaf,15,loaves,urgent,39.08399,-77.15276
+N005,Northside Food Bank,Food Pantry,8605554728,204 River Rd Hyattsville MD,Milk Gallon,20,liters,medium,38.95594,-76.94553
+N006,Youth Outreach Center,Youth Center,4015551182,205 1st St Greenbelt MD,Rice Bag ,24,bags,high,39.00455,-76.87553
+N007,Senior Care Pantry,Senior Center,6465559031,206 2nd St Takoma Park MD,Beans (Canned),30,cases,medium,38.98288,-77.0027
+N008,Refugee Welcome Hub,Refugee Support,9175557644,207 3rd St Washington DC,Apples ,40,bags,low,38.89511,-77.03637
+N009,Safe Haven Women’s Shelter,Women’s Shelter,3325550193,208 Main St College Park MD,Bananas ,5,packs,medium,38.9897,-76.93776
+N010,Campus Pantry,University Pantry,7185552270,209 Oak Ave Silver Spring MD,Yogurt Cups ,12,packs,high,39.00039,-77.02609
+N011,Riverbend Shelter,Homeless Shelter,5165558146,210 Main St Washington DC,Pasta ,20,kg,medium,38.89511,-77.03637
+N012,Unity Kitchen,Community Kitchen,6095552208,211 Oak Ave College Park MD,Tomatoes ,12,bags,low,38.9897,-76.93776
+N013,Grace Soup Kitchen,Soup Kitchen,8565553942,212 Pine Rd Silver Spring MD,Oranges ,20,bags,high,39.00039,-77.02609
+N014,CityCare Food Bank,Food Pantry,3025557819,213 Birch Rd Arlington VA,Granola Bars ,24,cases,medium,38.88162,-77.09098
+N015,Harbor Aid,Refugee Support,8045552104,214 Church St Alexandria VA,Bottled Water ,36,cases,urgent,38.80484,-77.04692

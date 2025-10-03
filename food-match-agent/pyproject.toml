@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "food-match-agent"
+version = "0.1.0"
+description = "Smart City Food Redistribution Agent"
+authors = ["<you>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+pandas = "*"
+# ADK optional; code runs without it
+google-adk = {version = "*", optional = true}
+flask = "*"
+
+[tool.poetry.extras]
+adk = ["google-adk"]

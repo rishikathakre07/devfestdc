@@ -1,0 +1,16 @@
+restaurant_id,restaurant_name,type,address,phone,food_item,quantity,unit,latitude,longitude 
+R001,Cafe Blue,Cafe,100 Main St Washington DC,2135550198,Chicken Sandwich,10,each,38.89511,-77.03637
+R002,Green Deli,Deli,101 Oak Ave College Park MD,3105554720,Veg Biryani,12,kg,38.9897,-76.93776
+R003,Urban Tandoor,Restaurant,102 Pine Rd Silver Spring MD,4155552864,Garden Salad,15,packs,39.00039,-77.02609
+R004,Campus Cafeteria,Cafeteria,103 Maple Ave Bethesda MD,5105559931,Bread Loaf,20,loaves,38.98465,-77.09471
+R005,Sunrise Bakery,Bakery,104 Birch Rd Arlington VA,4085553417,Milk Gallon,24,liters,38.88162,-77.09098
+R006,Metro Grocery,Grocery Store,105 Church St Alexandria VA,6195557285,Rice Bag ,30,bags,38.80484,-77.04692
+R007,QuickBite,Fast Food,106 River Rd Rockville MD,7075558130,Beans (Canned),40,cases,39.08399,-77.15276
+R008,City Food Court,Food Court,107 1st St Hyattsville MD,9165552049,Apples ,50,bags,38.95594,-76.94553
+R009,Rolling Feast Truck,Food Truck,108 2nd St Greenbelt MD,3035556623,Bananas ,6,packs,39.00455,-76.87553
+R010,Hearty Catering,Catering,109 3rd St Takoma Park MD,7195558741,Yogurt Cups ,18,packs,38.98288,-77.0027
+R011,River Cafe,Cafe,110 Main St Washington DC,9705551128,Pasta ,25,kg,38.89511,-77.03637
+R012,Capitol Deli,Deli,111 Oak Ave College Park MD,6025559374,Tomatoes ,16,bags,38.9897,-76.93776
+R013,Spice Route,Restaurant,112 Pine Rd Silver Spring MD,5205554483,Oranges ,22,bags,39.00039,-77.02609
+R014,Morning Bread,Bakery,113 Birch Rd Arlington VA,9285556019,Granola Bars ,36,cases,38.88162,-77.09098
+R015,Market Hub,Grocery Store,114 Church St Alexandria VA,7025553456,Bottled Water ,48,cases,38.80484,-77.04692
