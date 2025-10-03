@@ -32,10 +32,20 @@ We leverage **Google AI Studio, Vertex AI, and Google Maps APIs** to ensure food
 - ✅ Compliance with food safety guidelines (USDA / FDA).
 
 ---
-## Agent UI
+# Agent UI
 
 <img width="2962" height="1640" alt="image" src="https://github.com/user-attachments/assets/c038bc7e-dc8a-44db-9830-cd0a5d46c41e" />
 
+# Delivery UI
+
+## Orders Placed
+<img width="1280" height="827" alt="image" src="https://github.com/user-attachments/assets/22fa66a1-a141-408f-b260-0292409dec5d" />
+
+## Order Details
+<img width="554" height="664" alt="image" src="https://github.com/user-attachments/assets/f06c4643-7a1f-427f-b789-8082ff6326f7" />
+
+## Food Tracking
+<img width="1280" height="827" alt="image" src="https://github.com/user-attachments/assets/f9ab275c-e427-4f1c-a1d4-4c025da2b5b3" />
 
 ---
 ## Flowchart
