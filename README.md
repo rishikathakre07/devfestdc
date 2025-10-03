@@ -29,7 +29,13 @@ We leverage **Google AI Studio, Vertex AI, and Google Maps APIs** to ensure food
 - ✅ **AI-driven matching** between donors and NGOs based on demand, location, and food type.  
 - ✅ **Route optimization** with Google Maps to minimize delivery time and carbon footprint.  
 - ✅ **Real-time tracking** and transparency for donors & recipients.  
-- ✅ Compliance with food safety guidelines (USDA / FDA).  
+- ✅ Compliance with food safety guidelines (USDA / FDA).
+
+---
+## Agent UI
+
+<img width="2962" height="1640" alt="image" src="https://github.com/user-attachments/assets/c038bc7e-dc8a-44db-9830-cd0a5d46c41e" />
+
 
 ---
 ## Flowchart
@@ -150,3 +156,4 @@ devfestdc/
 ├── datasets/ # Sample datasets (mock NGO & donor data)
 ├── README.md # Project overview
 └── LICENSE
+
