@@ -113,9 +113,12 @@ We leverage **Google AI Studio, Vertex AI, and Google Maps APIs** to ensure food
 ## 🔬 Technical Architecture
 
 ### Tech Stack
-- **Frontend:** Flutter (mobile), React (web)  
-- **Backend:** Node.js / Python (FastAPI)    
-- **AI/ML:** Google AI Studio + Vertex AI  
+- **Data**: CSV-based donor/NGO/volunteer tables (with location + contact).
+- **Agent**: Google ADK Agent executes matching logic and generates structured logs.
+- **Backend**: Python (Flask) serving REST endpoints.
+- **Frontend**: Web UI rendering assignments with cards, priorities, phone numbers, and Google
+Maps route links.
+- **Integration**: All assignments visible live via / (UI) or /api/assignments.
 
 ---
 
