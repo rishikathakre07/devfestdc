@@ -4,7 +4,7 @@ from datetime import datetime
 from math import radians, sin, cos, atan2, sqrt
 from typing import Dict, Any, List, Tuple, Optional
 
-from .data_loader import load_restaurants, load_ngos, load_volunteers
+from data_loader import load_restaurants, load_ngos, load_volunteers
 
 LOGS_PATH = os.path.join(os.path.dirname(__file__), "logs", "logs.json")
 
